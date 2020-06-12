@@ -239,19 +239,19 @@ namespace bx
 
 	ReaderI* getStdIn()
 	{
-		static FileReaderImpl s_stdIn(stdout);
+		static FileReaderImpl s_stdIn(NULL);
 		return &s_stdIn;
 	}
 
 	WriterI* getStdOut()
 	{
-		static FileWriterImpl s_stdOut(stdout);
+		static FileWriterImpl s_stdOut(NULL);
 		return &s_stdOut;
 	}
 
 	WriterI* getStdErr()
 	{
-		static FileWriterImpl s_stdOut(stderr);
+		static FileWriterImpl s_stdOut(NULL);
 		return &s_stdOut;
 	}
 
